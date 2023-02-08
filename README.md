@@ -5,6 +5,7 @@
 This project is using YOLOV5  Algorithm to perform object recognition and tracking realtime.
 
 **Dependencies**
+
 Python >= 3.8
 
 1. ### Nighttime_project_yolov5
