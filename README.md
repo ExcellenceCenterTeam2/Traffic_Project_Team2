@@ -24,9 +24,11 @@ Python >= 3.8
 **Run YOLOv5 detection with our datasets**
 
 - from HTTP stream:
+
 *python3 yolov5/detect.py --weights yolov5/runs/train/exp/weights/best.pt  --data datasets/data.yaml --source https://www.youtube.com/watch?v=wqctLW0Hb_0*
 
 - from Video: 
+
 *python3 yolov5/detect.py --weights yolov5/runs/train/exp/weights/best.pt  --data ../datasets/data.yaml --source media/traffic.mp4 --name video_1 --view-img*
 
 
