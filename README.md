@@ -17,7 +17,7 @@ Python >= 3.8
 *python3 src/traffic_prj_main.py*
 
 
-2. ### Nighttime_project_yolov5
+2. ### Daytime_project_yolov5
 
 **Run YOLOv5 detection with our datasets**
 
@@ -28,7 +28,7 @@ Python >= 3.8
 *python3 yolov5/detect.py --weights yolov5/runs/train/exp/weights/best.pt  --data ../datasets/data.yaml --source media/traffic.mp4 --name video_1 --view-img*
 
 
-3. ### Nighttime_project_yolov5
+3. ### Yolov5_DeepSort_Pytorch
 
 **Run Yolov5 DeepSort Tracker with our datasets**
 
