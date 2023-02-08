@@ -1,7 +1,8 @@
 # Traffic_Project_Team2
 
 **Show the statistics of the road traffic**
-This project is using YOLOV5 and Deep Sort Algorithm to perform object recognition and tracking realtime.
+
+This project is using YOLOV5  Algorithm to perform object recognition and tracking realtime.
 
 **Dependencies**
 Python >= 3.8
