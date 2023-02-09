@@ -2,13 +2,13 @@
 
 **Show the statistics of the road traffic**
 
-This project is using YOLOV5  Algorithm to perform object recognition and tracking realtime.
+This project is using YOLOv5  Algorithm to perform object recognition and tracking in real time.
 
 **Dependencies**
 
 Python >= 3.8
 
-1. ### Nighttime_project_yolov5
+1. ### Nighttime_project_YOLOv5
 
 **Install the libraries**
 
@@ -19,7 +19,7 @@ Python >= 3.8
 *python3 src/traffic_prj_main.py*
 
 
-2. ### Daytime_project_yolov5
+2. ### Daytime_project_YOLOv5
 
 **Run YOLOv5 detection with our datasets**
 
