@@ -32,9 +32,9 @@ Python >= 3.8
 *python3 yolov5/detect.py --weights yolov5/runs/train/exp/weights/best.pt  --data ../datasets/data.yaml --source media/traffic.mp4 --name video_1 --view-img*
 
 
-3. ### Yolov5_DeepSort_Pytorch
+3. ### YOLOv5_DeepSort_Pytorch
 
-**Run Yolov5 DeepSort Tracker with our datasets**
+**Run YOLOv5 DeepSort Tracker with our datasets**
 
 *python3 track_changed.py --source media/test2.mp4 --yolo-weights weights/best.pt  --show-vid --save-vid*
 
