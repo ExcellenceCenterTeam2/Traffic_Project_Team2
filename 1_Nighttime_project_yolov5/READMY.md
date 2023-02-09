@@ -1,4 +1,4 @@
-_**directory to project Nighttime_project_yolov5**
+_**directorys to project Nighttime_project_yolov5**_
 
 1. **datasets**
 2.**media** - download the folder media from google drive 
