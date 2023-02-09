@@ -1,4 +1,4 @@
-_**directory to project Daytime_project_yolov5**_
+_**directories to project Daytime_project_yolov5**_
 
 1. **datasets**
 2. **media** - download the folder media from google drive
