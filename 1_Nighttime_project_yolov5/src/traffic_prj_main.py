@@ -75,8 +75,8 @@ while True:
 
     cv2.putText(img, "Number of Cars Leaving: " + str(number_of_cars_leaving), (35, 35), cv2.FONT_HERSHEY_PLAIN, 2, COLOR_TEXT, 2)
     cv2.putText(img, "Number of Trucks Leaving: " + str(number_of_trucks_leaving), (35, 70), cv2.FONT_HERSHEY_PLAIN, 1.85, COLOR_TEXT, 2)
-    cv2.putText(img, "Numbers of Cars Entering: " + str(number_of_cars_entering), (740, 35), cv2.FONT_HERSHEY_PLAIN, 2, COLOR_TEXT, 2 )
-    cv2.putText(img, "Numbers of Trucks Entering: " + str(number_of_trucks_entering), (740, 70), cv2.FONT_HERSHEY_PLAIN, 1.85, COLOR_TEXT, 2)
+    cv2.putText(img, "Number of Cars Entering: " + str(number_of_cars_entering), (740, 35), cv2.FONT_HERSHEY_PLAIN, 2, COLOR_TEXT, 2 )
+    cv2.putText(img, "Number of Trucks Entering: " + str(number_of_trucks_entering), (740, 70), cv2.FONT_HERSHEY_PLAIN, 1.85, COLOR_TEXT, 2)
 
     cv2.imshow("IMG", img)
     if cv2.waitKey(20) & 0xFF == ord("q"):
