@@ -6,10 +6,10 @@ from traffic_prj_constants import *
 
 fps = 30
 frame_count = 0
-numbers_of_cars_leaving = 0
-numbers_of_trucks_leaving = 0
-numbers_of_cars_entering = 0
-numbers_of_trucks_entering = 0
+number_of_cars_leaving = 0
+number_of_trucks_leaving = 0
+number_of_cars_entering = 0
+number_of_trucks_entering = 0
 
 
 def frame_per_second():
@@ -64,19 +64,19 @@ while True:
 
         if center_y < (LINE_POSITIONAL2 + OFFSET1 + 4) and center_y > (LINE_POSITIONAL2 - OFFSET1) and center_x < 650:
             if vehicle_class == 0:
-                numbers_of_cars_leaving = display_vehicles_count(numbers_of_cars_leaving, x2, y2, img)
+                number_of_cars_leaving = display_vehicles_count(number_of_cars_leaving, x2, y2, img)
             if vehicle_class == 1:
-                numbers_of_trucks_leaving = display_vehicles_count(numbers_of_trucks_leaving, x2, y2, img)
+                number_of_trucks_leaving = display_vehicles_count(number_of_trucks_leaving, x2, y2, img)
         if center_y < (LINE_POSITIONAL1 + OFFSET2) and center_y > (LINE_POSITIONAL1 - OFFSET2) and center_x > 650:
             if vehicle_class == 0:
-                numbers_of_cars_entering = display_vehicles_count(numbers_of_cars_entering, x2, y2, img)
+                number_of_cars_entering = display_vehicles_count(number_of_cars_entering, x2, y2, img)
             if vehicle_class == 1:
-                numbers_of_trucks_entering = display_vehicles_count(numbers_of_trucks_entering, x2, y2, img)
+                number_of_trucks_entering = display_vehicles_count(number_of_trucks_entering, x2, y2, img)
 
-    cv2.putText(img, "Numbers of Cars Leaving: " + str(numbers_of_cars_leaving), (35, 35), cv2.FONT_HERSHEY_PLAIN, 2, COLOR_TEXT, 2)
-    cv2.putText(img, "Numbers of Tracks Leaving: " + str(numbers_of_trucks_leaving), (35, 70), cv2.FONT_HERSHEY_PLAIN, 1.85, COLOR_TEXT, 2)
-    cv2.putText(img, "Numbers of Cars Entering: " + str(numbers_of_cars_entering), (740, 35), cv2.FONT_HERSHEY_PLAIN, 2, COLOR_TEXT, 2 )
-    cv2.putText(img, "Numbers of Trucks Entering: " + str(numbers_of_trucks_entering), (740, 70), cv2.FONT_HERSHEY_PLAIN, 1.85, COLOR_TEXT, 2)
+    cv2.putText(img, "Number of Cars Leaving: " + str(number_of_cars_leaving), (35, 35), cv2.FONT_HERSHEY_PLAIN, 2, COLOR_TEXT, 2)
+    cv2.putText(img, "Number of Trucks Leaving: " + str(number_of_trucks_leaving), (35, 70), cv2.FONT_HERSHEY_PLAIN, 1.85, COLOR_TEXT, 2)
+    cv2.putText(img, "Numbers of Cars Entering: " + str(number_of_cars_entering), (740, 35), cv2.FONT_HERSHEY_PLAIN, 2, COLOR_TEXT, 2 )
+    cv2.putText(img, "Numbers of Trucks Entering: " + str(number_of_trucks_entering), (740, 70), cv2.FONT_HERSHEY_PLAIN, 1.85, COLOR_TEXT, 2)
 
     cv2.imshow("IMG", img)
     if cv2.waitKey(20) & 0xFF == ord("q"):
