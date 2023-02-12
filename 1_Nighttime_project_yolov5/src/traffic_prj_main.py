@@ -4,7 +4,7 @@ from traffic_prj_functions import *
 from traffic_prj_constants import *
 
 
-fps = 30
+#fps = 30
 frame_count = 0
 number_of_cars_leaving = 0
 number_of_trucks_leaving = 0
@@ -12,14 +12,14 @@ number_of_cars_entering = 0
 number_of_trucks_entering = 0
 
 
-def frame_per_second():
-    global fps, start_frame_time, current_frame_time, frame_count
-    elapsed_time = current_frame_time - start_frame_time
-    if elapsed_time > 1:
-        fps = frame_count / elapsed_time
-        frame_count = 0
-        start_frame_time = current_frame_time
-    return fps
+#def frame_per_second():
+ #   global fps, start_frame_time, current_frame_time, frame_count
+  #  elapsed_time = current_frame_time - start_frame_time
+   # if elapsed_time > 1:
+    #    fps = frame_count / elapsed_time
+     #   frame_count = 0
+      #  start_frame_time = current_frame_time
+    #return fps
 
 
 cap = cv2.VideoCapture("media/test1.mp4")
@@ -31,7 +31,7 @@ while True:
         continue
     # fps = cap.get(cv2.CAP_PROP_FPS)
     current_frame_time = time.time()
-    fps = frame_per_second()
+    fps = calculate_fps(start_frame_time, frame_count)
     cv2.putText(img, "FPS : " + str(int(fps)), (50, 1000), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 0), 2)
 
     img = cv2.resize(img, (1280, 720))
