@@ -1,4 +1,5 @@
 import math
+import time
 import cv2
 from traffic_prj_constants import *
 
@@ -6,6 +7,19 @@ from traffic_prj_constants import *
 vehicle_center_points = {}
 vehicle_id = 0
 
+def calculate_fps(start_time, frame_count):
+    """
+    Calculates the frames per second (FPS) given the start time and the total number of frames processed.
+
+    Parameters:
+    start_time (float): The start time of the video processing, in seconds (obtained using `time.time()`).
+    frame_count (int): The total number of frames processed.
+
+    Returns:
+    float: The calculated frames per second.
+
+    """
+    return frame_count / (time.time() - start_time)
 
 def display_vehicle_name(x1, y1, x2, y2, confidence, name, color, img):
     """
