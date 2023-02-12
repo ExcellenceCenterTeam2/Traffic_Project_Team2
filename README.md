@@ -24,7 +24,10 @@ Python >= 3.8
  - datasets
  - media: download the folder media from google drive 
  
- link: https://drive.google.com/drive/folders/1FHLs04jdQPBuSbD4Yh8LCdpDKi5nwhlA?usp=sharing
+ test1.mp4: https://drive.google.com/uc?export=download&id=11144W6nlCnytJIW77FPKyAPVn0D9AITJ
+
+ test2.mp4: https://drive.google.com/uc?export=download&id=1-zHwaMTbqYvFQtcuO-KT45J6R68iY426
+ 
  - src
  - yolov5
 
