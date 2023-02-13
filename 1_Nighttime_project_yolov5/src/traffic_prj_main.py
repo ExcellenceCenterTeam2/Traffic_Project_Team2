@@ -45,13 +45,12 @@ while True:
 
         center_x, center_y = int((x1 + x2) / 2), int((y1 + y2) / 2)
         cv2.circle(img, (center_x, center_y), 4, (0, 255, 0), -1)
-
         detection.append([index, x1, y1, x2, y2])
         vehicle_obj = track_vehicles(detection)
         for row in vehicle_obj:
             index, x1, y1, x2, y2, id = row
 
-        if center_y < (LINE_POSITIONAL2 + OFFSET1 + 4) and center_y > (LINE_POSITIONAL2 - OFFSET1) and center_x < 650:
+        if center_y < (LINE_POSITIONAL2 + OFFSET1 + 2) and center_y > (LINE_POSITIONAL2 - OFFSET1) and center_x < 650:
             if vehicle_class == 0:
                 number_of_cars_leaving = display_vehicles_count(number_of_cars_leaving, x2, y2, img)
             if vehicle_class == 1:
