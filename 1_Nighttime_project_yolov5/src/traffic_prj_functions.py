@@ -85,23 +85,23 @@ def track_vehicles(vehicle_rect):
     vehicles_boxes_ids = []
 
     for rect in vehicle_rect:
-        index, x, y, w, h = rect
-        center_x = x + w / 2
-        center_y = y + h / 2
+        index, x_min, y_min, x_max, y_max = rect
+        center_x = int((x_min + x_max) / 2)
+        center_y = int((y_min + y_max) / 2)
 
         same_vehicle_detected = False
         for id, pt in vehicle_center_points.items():
             distance = math.hypot(center_x - pt[0], center_y - pt[1])
-
-            if distance < w - x:
+            width = x_max-x_min
+            if distance < width/2:
                 vehicle_center_points[id] = (center_x, center_y)
 
-                vehicles_boxes_ids.append([index, x, y, w, h, id])
+                vehicles_boxes_ids.append([index, x_min, y_min, x_max, y_max, id])
                 same_vehicle_detected = True
                 # break
 
         if same_vehicle_detected is False:
             vehicle_center_points[vehicle_id] = (center_x, center_y)
-            vehicles_boxes_ids.append([index, x, y, w, h, vehicle_id])
+            vehicles_boxes_ids.append([index, x_min, y_min, x_max, y_max, vehicle_id])
             vehicle_id += 1
     return vehicles_boxes_ids
