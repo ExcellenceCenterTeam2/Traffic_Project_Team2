@@ -65,22 +65,21 @@ def display_vehicles_count(numbers, x2, y2, img):
 
 def track_vehicles(vehicle_rect):
     """
-	Track vehicles in a video by assigning unique IDs to each vehicle.
-	This function takes in the `vehicle_rect` which is a list of rectangles representing the
-	detected vehicles in a frame. It then checks if the vehicle has been detected previously
-	by finding its center coordinates and comparing it to the stored vehicle center points.
-	If a match is found, the same ID is assigned to the vehicle, otherwise a new ID is
-	assigned to the new vehicle.
-	Parameters:
-	- vehicle_rect (list): A list of rectangles representing the detected vehicles in a frame.
-    	Each rectangle is represented as a list with 6 values: [index, x, y, w, h, id].
-    	The index is the index of the vehicle in the `vehicle_rect` list, x and y are the
-    	coordinates of the top-left point of the rectangle, w and h are the width and height
-    	of the rectangle and id is the assigned ID of the vehicle.
-	Returns:
-	- vehicles_boxes_ids (list): A list of rectangles with assigned IDs representing the
-    	detected vehicles in a frame.
-	"""
+    Given a list of vehicle bounding boxes in the form [index, x_min, y_min, x_max, y_max],
+    this function tracks the detected vehicles over time, assigns a unique ID to each vehicle,
+    and returns a list of bounding boxes with their corresponding vehicle IDs.
+    Parameters:
+    vehicle_rect : list
+        A list of vehicle bounding boxes, where each bounding box is a list of
+        [index, x_min, y_min, x_max, y_max] that represents the index of the frame,
+        and the coordinates of the top-left and bottom-right corners of the bounding box.
+    Returns:
+    vehicles_boxes_ids : list
+        A list of vehicle bounding boxes, where each bounding box is a list of
+        [index, x_min, y_min, x_max, y_max, id], that represents the index of the frame,
+        the coordinates of the top-left and bottom-right corners of the bounding box,
+        and the ID of the vehicle that the bounding box corresponds to.
+    """
     global vehicle_id
     vehicles_boxes_ids = []
 
